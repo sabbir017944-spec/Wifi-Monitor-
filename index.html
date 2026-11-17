@@ -1,52 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WiFi Monitor</title>
+<meta name="theme-color" content="#101827">
+<title>WiFi Monitor – Tenda F6</title>
 <style>
-body {
-  margin: 0;
-  padding: 20px;
-  background: #101827;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 15px 0;
-}
-h1 { color: #38bdf8; }
-button {
-  background: #0284c7;
-  color: white;
-  border: 0;
-  padding: 13px;
-  border-radius: 9px;
-  width: 100%;
-}
+*{box-sizing:border-box}body{margin:0;padding:18px;background:#101827;color:#eef4ff;font-family:system-ui,Arial,sans-serif;max-width:720px;margin:auto}
+h1{color:#38bdf8;margin:8px 0}p{line-height:1.55;color:#cbd5e1}.card{background:#1e293b;padding:18px;border-radius:15px;margin:14px 0}
+button,.link{display:block;text-align:center;background:#0284c7;color:white;text-decoration:none;border:0;padding:14px;border-radius:10px;width:100%;font-size:16px;margin:10px 0}
+.secondary{background:#334155}.note{font-size:14px;color:#fbbf24}.small{font-size:13px;color:#94a3b8}
 </style>
 </head>
 <body>
 <h1>WiFi Monitor</h1>
+<p>Tenda F6-এর স্থানীয় নেটওয়ার্ক তথ্য দেখার সহায়ক পেজ।</p>
 <div class="card">
-<h3>Router Monitoring</h3>
-<p>Status: Not Connected</p>
-<p>Router IP: Not Set</p>
-<button onclick="connectRouter()">Connect Router</button>
+<h3>১. বাসার Wi‑Fi-তে যুক্ত হও</h3>
+<p>ফোনের Wi‑Fi থেকে নিজের Tenda F6 নেটওয়ার্কে কানেক্ট করো। মোবাইল ডাটা বন্ধ রাখলে ভুল নেটওয়ার্কে যাওয়ার সম্ভাবনা কমবে।</p>
+<a class="link" href="http://192.168.0.1/">রাউটার প্যানেল খুলুন (192.168.0.1)</a>
+<a class="link secondary" href="http://tendawifi.com/">বিকল্প ঠিকানা: tendawifi.com</a>
+<p class="small">রাউটারের নিচের লেবেলে দেওয়া Login IP-ও ব্যবহার করা যায়।</p>
 </div>
 <div class="card">
-<h3>Network Information</h3>
-<p id="status">Waiting for connection...</p>
+<h3>২. Tenda F6-এ কী দেখা যায়</h3>
+<ul>
+<li>ইন্টারনেট সংযোগের অবস্থা</li>
+<li>কতটি ডিভাইস অনলাইনে আছে</li>
+<li>রিয়েল-টাইম আপলোড ও ডাউনলোড গতি</li>
+<li>অনলাইন ডিভাইসের নাম, IP ও MAC (ফার্মওয়্যার/পেজ অনুযায়ী)</li>
+</ul>
+<p class="small">এই তথ্যগুলো রাউটারের নিজস্ব Status / Bandwidth Control পেজে দেখা যায়।</p>
 </div>
-<script>
-function connectRouter() {
- document.getElementById("status").innerText =
- "Router connection setup required.";
-}
-</script>
+<div class="card">
+<h3>৩. স্বয়ংক্রিয় মনিটরিংয়ের অবস্থা</h3>
+<p id="state">এখনো রাউটারের সঙ্গে কোনো সরাসরি ডেটা সংযোগ করা হয়নি।</p>
+<p class="note">এই GitHub Pages পেজ একা রাউটারের ডিভাইস তালিকা বা ট্রাফিক ডেটা পড়তে পারে না। Tenda F6-এর নির্দিষ্ট হার্ডওয়্যার/ফার্মওয়্যারের API বা আলাদা Android স্থানীয়-নেটওয়ার্ক অ্যাপ লাগবে।</p>
+</div>
+<div class="card">
+<h3>পরের ধাপের জন্য</h3>
+<p>রাউটারের প্যানেল খুলে Status পেজে যাও। নিচের তথ্যগুলো দেখে রাখো: Hardware Version, Firmware Version এবং Login IP। কোনো পাসওয়ার্ড বা Wi‑Fi key এখানে পাঠাবে না।</p>
+</div>
 </body>
 </html>
