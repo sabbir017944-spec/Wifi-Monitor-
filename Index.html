@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WiFi Monitor</title>
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  background: #101827;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+h1 { color: #38bdf8; }
+button {
+  background: #0284c7;
+  color: white;
+  border: 0;
+  padding: 13px;
+  border-radius: 9px;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+<h1>WiFi Monitor</h1>
+<div class="card">
+<h3>Router Monitoring</h3>
+<p>Status: Not Connected</p>
+<p>Router IP: Not Set</p>
+<button onclick="connectRouter()">Connect Router</button>
+</div>
+<div class="card">
+<h3>Network Information</h3>
+<p id="status">Waiting for connection...</p>
+</div>
+<script>
+function connectRouter() {
+ document.getElementById("status").innerText =
+ "Router connection setup required.";
+}
+</script>
+</body>
+</html>
